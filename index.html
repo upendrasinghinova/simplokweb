@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- <meta charset="UTF-8" /> -->
+    <!-- <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    /> -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Dropdown</title>
+    
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+
+    <title>simplok</title>
+
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css" /> -->
+
+    
+
+    <!--Custom CSS Link-->
+    <link rel="stylesheet" href="css/style.css" />
+    <!--Bootstrap Icons-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css"
+    />
+
+    <!--fontawesome Link-->
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    /> -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+
+      <!-- Standard favicon -->
+      <link rel="icon" type="image/x-icon" href="Images/favicon.ico" />
+      <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png" />
+      <!-- <link rel="icon" type="image/svg+xml" href="Images/favicon.svg" /> -->
+
+      <!-- For Apple devices -->
+      <link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png" />
+
+      <!-- For Windows tiles -->
+      <meta name="msapplication-TileImage" content="Images/mstile-150x150.png" />
+      <meta name="msapplication-TileColor" content="#ffffff" />
+
+      <!--CSS Animation-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+  </head>
+  
+
+  
+  <body class="wholebg-image">
+
+    <div class="container-fluid bg-image">
+      
+      <!-- Sticky Navbar -->
+      
+      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid px-5">
+          <a class="navbar-brand" href="index.html">
+            <img
+              src="Images/logo.png"
+              alt="Logo"
+              width="150"
+              height="auto"
+              class="d-inline-block align-text-top"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active me-2" aria-current="page" href="index.html" onclick="setActive(this)">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link me-3" href="about.html" onclick="setActive(this)">About Us</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link me-3 dropdown-toggle"
+                  id="navbarDropdown"
+                  href="#"
+                  onclick="setActive(this)"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Our Services
+                </a>
+                <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="service-application-integration.html">Application Integration</a></li>
+                  <li><a class="dropdown-item" href="service-data-engineering.html">Data Engineering</a></li>
+                  <li><a class="dropdown-item" href="service-EDI-integration.html">EDI Integration</a></li>
+                  <li><a class="dropdown-item" href="service-API-development">API Development</a></li>
+                  <li><a class="dropdown-item" href="service-cloud-migration">Cloud Migration</a></li>
+                  <li><a class="dropdown-item" href="service-website-design">Website Design Development</a></li>
+                  <li><a class="dropdown-item" href="service-managed-services">Managed Services</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link me-3" href="people.html" onclick="setActive(this)">Our People</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link me-3" href="testimonial.html" onclick="setActive(this)">Testimonials</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link me-3" href="blog.html" onclick="setActive(this)">Blogs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link me-3" href="contactus.html" onclick="setActive(this)">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+    </div>
+
+
+<!-- Hero Section -->
+<div class="container-fluid ps-5 pe-0 justify-content-center align-items-center mt-5 pt-5 hero-container position-relative">
+  <div class="row d-flex align-items-center flex-column-reverse flex-lg-row">
+    <!-- Text Column -->
+    <div class="col-lg-6 col-md-12 col-sm-12 text-column mobile-center-align">
+      <span class="text-highlight responsive-span mt-2 " data-animation="fade-in">
+        WE ARE EXPERT IN THIS FIELD
+      </span>
+      <h1
+        class="display-4 fw-semibold line-height-responsive mt-4 mb-4 manrope-font" data-animation="slide-up">
+        Streamline. Innovate. <br />
+        Succeed.
+      </h1>
+      <p class="pe-lg-5 pe-md-3 mb-4 hero-text" data-animation="slide-up">
+        We help businesses build the right cloud foundations to future-proof their operations and drive innovation.
+      </p>
+      <a class="btn btn-primary custom-btn py-2 px-4 text-decoration-none text-white animate-fade-in-delay" href="about.html">
+        About Us
+      </a>
+    </div>
+
+    <!-- Image Column -->
+    <div class="col-lg-6 col-md-12 col-sm-12 mb-4 image-column">
+      <div class="image-container position-relative">
+        <img
+          src="Images/Hero Section right image (1).png"
+          alt="hero image"
+          class="img-fluid" data-animation="float"
+        >
+      </div>
+    </div>
+  </div>
+
+  <!-- Background Animations -->
+  <div class="background-animations">
+    <span class="bg-circle bg-circle-1"></span>
+    <span class="bg-circle bg-circle-2"></span>
+    <span class="bg-dot bg-dot-1"></span>
+    <span class="bg-dot bg-dot-2"></span>
+  </div>
+</div>
+
+    
+<!-- What we do for you -->
+
+<div class="container text-center py-5">
+  <div class="row align-items-center">
+    <div class="col-12">
+      <span class="text-highlight responsive-span" data-animation="fade-in">WHAT WE DO FOR YOU</span>
+      <h3 class="mt-3" data-animation="slide-up" >
+        We can Inspire and Offer <br class="d-none d-md-block" /> Different Services
+      </h3>
+    </div>
+  </div>
+
+  <!-- Services Section -->
+  <div class="row g-4 d-flex align-items-center justify-content-center mt-lg-4" >
+    <!-- Service 1 -->
+    <div class="col-lg-4 col-md-6 col-sm-12" data-animation="slide-up">
+      <div id="application-integration" class="box-size p-4 text-center">
+        <a href="service-application-integration.html" class="service-link">
+          <i class="fas fa-users-cog fa-3x my-4 icon-color"></i>
+         
+          <h5 class="service-text-color">Application Integration</h5>
+        
+       
+        <p class="my-4">
+          Azure Integration Services unifies API Management, Logic Apps, Service Bus, and Event Grid for cloud integration.
+        </p>
+      </a>
+      </div>
+    </div>
+
+    <!-- Service 2 -->
+    <div class="col-lg-4 col-md-6 col-sm-12" data-animation="slide-up">
+      <div id="data-engineering" class="box-size p-4 text-center">
+        <a href="service-data-engineering.html" class="service-link">
+
+          <i class="fas fa-database fa-3x my-4 icon-color"></i>
+          
+          <h5 class="service-text-color">Data Engineering</h5>
+        
+        
+        <p class="my-4">
+          We deliver Azure Data services, including integration, migration, analytics, and optimization for business growth.
+        </p>
+      </a>
+      </div>
+    </div>
+
+    <!-- Service 3 -->
+    <div class="col-lg-4 col-md-6 col-sm-12"data-animation="slide-up">
+      <div id="edi-integration" class="box-size p-4 text-center">
+        <a href="service-EDI-integration.html" class="service-link">
+
+          <i class="fas fa-receipt fa-3x my-4 icon-color"></i>
+          <h5 class="service-text-color">EDI Integration</h5>
+        
+        <p class="my-4">
+          EDI Integration streamlines document exchange and automates transactions for improved efficiency and security.
+        </p>
+      </a>
+      </div>
+    </div>
+
+    <!-- Service 4 -->
+    <div class="col-lg-4 col-md-6 col-sm-12" data-animation="slide-up">
+      <div id="api-development" class="box-size p-4 text-center">
+        <a href="service-API-development.html" class="service-link">
+          
+          <i class="fas fa-tools fa-3x my-4 icon-color"></i>
+          <h5 class="service-text-color">API Development</h5>
+       
+        <p class="my-4">
+          SimpLok’s API Development uses the Microsoft Cloud Adoption Framework to optimize secure Azure solutions.
+        </p>
+      </a>
+      </div>
+    </div>
+
+    <!-- Service 5 -->
+    <div class="col-lg-4 col-md-6 col-sm-12" data-animation="slide-up">
+      <div id="cloud-migration" class="box-size p-4 text-center">
+        <a href="service-cloud-migration.html" class="service-link">
+          <i class="fa-solid fa-cloud-arrow-up fa-3x my-4 icon-color"></i>
+          <h5 class="service-text-color">Cloud Migration</h5>
+        
+        <p class="my-4">
+          We offer Azure Data Engineering services, including integration, migration, analytics, and optimization for business growth.
+        </p>
+      </a>
+      </div>
+    </div>
+
+    <!-- Service 6 -->
+    <div class="col-lg-4 col-md-6 col-sm-12" data-animation="slide-up">
+      <div id="website-design" class="box-size p-4 text-center">
+        <a href="service-website-design.html" class="service-link">
+          <i class="fa-solid fa-pen-ruler fa-3x my-4 icon-color"></i>
+          <h5 class="service-text-color">Website Design Development</h5>
+        
+        <p class="my-4">
+          We design user-friendly, engaging websites with intuitive UI/UX and robust development, ensuring brand alignment.
+        </p>
+      </a>
+      </div>
+    </div>
+
+    <!-- Service 7 -->
+    <div class="col-lg-4 col-md-6 col-sm-12" data-animation="slide-up">
+      <div id="Managed-Services" class="box-size p-4 text-center">
+        <a href="service-managed-services.html" class="service-link">
+          <i class="fa-solid fa-gear fa-3x my-4 icon-color"></i>
+          <h5 class="service-text-color">Managed Services</h5>
+     
+        <p class="my-4">
+          We design user-friendly, engaging websites with intuitive UI/UX and robust development, ensuring brand alignment.
+        </p>
+      </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+  <!-- Company Overview-->
+
+  <div class="container justify-content-center align-items-center my-md-2 position-relative ">
+    <div
+      class="row d-flex align-items-center flex-column-reverse flex-lg-row"
+    >
+      <div class="col-lg-6 col-md-12 col-sm-12 pt-only-sm-5">
+        <span class="text-highlight responsive-span " data-animation="fade-in">COMPANY OVERVIEW</span>
+        <h3 class="my-4" data-animation="slide-up">
+          Empowering Digital Transformation<br />
+          Through Innovative Cloud Solutions
+        </h3>
+        <p class="pe-lg-5 pe-md-3 my-4 text-increase" data-animation="slide-up">
+          At SimpLok, we deliver innovative cloud solutions tailored to your business needs. Our dedicated team drives success by building strong cloud foundations, enabling digital transformation and growth. We simplify complexity, leveraging modern technologies in Application and Data Integration, Electronic Data Interchange (EDI), and Security standards to provide scalable IT strategies that shape your organization's future.
+        </p>
+        
+      </div>
+
+      <div class="col-lg-6 col-md-12 col-sm-12 text-center position-relative" data-animation="slide-up">
+        
+        <img
+          src="Images/company-overview1.png"
+          alt="GetToKnowUs image"
+          class="img-fluid reducedimg-size me-0 img-increase"
+        />
+      
+    </div>
+    </div>
+    <div class="background-animations">
+      <span class="bg-circle bg-circle-1"></span>
+      <!-- <span class="bg-dot bg-dot-1"></span> -->
+      
+      <img
+        src="Images/circle_orange.png"
+        alt="GetToKnowUs image"
+        class="bg-img-overview " data-animation="float"
+      />
+    </div>
+  </div>
+
+ <!-- Get To Know Us --> 
+
+ <div class="container justify-content-center align-items-center my-md-5 position-relative">
+  <div class="row d-flex align-items-center flex-lg-row">
+    <div class="col-lg-6 col-md-12 col-sm-12 text-center position-relative" data-animation="slide-up">
+      <img
+        src="Images/gettoknowimage1.png"
+        alt="GetToKnowUs image"
+        class="img-fluid reducedimg-size1 ms-0"
+      />
+    </div>
+    <div class="col-lg-6 col-md-12 col-sm-12 pt-only-sm-5">
+      <span class="text-highlight responsive-span" data-animation="fade-in">GET TO KNOW US</span>
+      <h3 class="mt-4" data-animation="slide-up">
+        Our Approach to Delivering  <br />
+        Excellence 
+      </h3>
+      <p class="pe-lg-5 pe-md-3 my-3 text-increase" data-animation="slide-up">
+        We operate with a "Let’s Do It" mindset, focusing on solutions rather than limitations. Here’s how we ensure success:
+      </p>
+      <div class="row align-items-start" data-animation="slide-up">
+        <div class="col-4 col-md-2 ">
+
+            <a href="service.html#managed-services" class="service-link ">
+              <i class="fas fa-chart-bar fa-3x my-4 icon-color"></i>
+            </a>
+         </div>
+         <div class="col-8 col-md-10 ">
+           <h5 class="Business-text my-2">Tailored Solutions</h5>
+           <p class="pe-lg-4 pe-md-4 col-md-10 col-12">
+             We analyze your current roadmaps and pain points to deliver customized, optimal outcomes.
+           </p>
+         </div>
+       </div>
+
+       <div class="row align-items-start" data-animation="slide-up">
+         <div class="col-4 col-md-2 ">
+          
+             <a href="service.html#managed-services" class="service-link ">
+              <i class="fas fa-history fa-3x my-4 icon-color"></i>
+            </a>
+            
+          </div>
+          <div class="col-8 col-md-10">
+            <h5 class="Business-text my-2">Flexible Engagement Models</h5>
+            <p class="pe-lg-4 pe-md-4 col-md-10 col-12 ">
+              Choose between Time & Materials or Fixed Price models. We also offer advisory services to help you select the best approach for your budget and risk.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Centering the View More link -->
+        <div class="d-flex justify-center mt-4 viewmore" data-animation="slide-up">
+          <a class="text-decoration" href="about.html">See More<i class="fa-solid fa-chevron-right px-2"></i></a>
+        </div>
+        
+      </div>
+    </div>
+    <div class="background-animations" data-animation="slide-up">
+      <span class="bg-circle bg-circle-2"></span>
+      <!-- <span class="bg-dot bg-dot-2"></span> -->
+      
+      <img
+        src="Images/get-shape2.png"
+        alt="GetToKnowUs image"
+        class="bg-img-overview-1" data-animation="float" 
+      />
+    </div> 
+
+  </div>
+
+
+<!-- Expert People -->
+
+    <div class="container text-center mt-lg-4 expert-people-section">
+      <div class="row d-flex align-items-center">
+        <div class="col-lg-12 col-md-12 margin-top-2rem">
+          <span class="text-highlight responsive-span" data-animation="slide-up">EXPERT PEOPLE</span>
+          <h3 class="testimonial-text mt-4" data-animation="slide-up">Dedicated Team Members</h3>
+          <p class="mt-3 text-increase" data-animation="slide-up">
+            Meet our expert team, driven by innovation and excellence
+            <br class="d-none d-sm-block" />
+            Empowering your vision with unmatched expertise
+          </p>
+        </div>
+    
+        <div class="row g-md-3 mx-auto team-members-container">
+          <!-- Added g-3 for spacing between columns -->
+          <!-- Column 1 -->
+          <div class="col-lg-2 col-md-6 mx-auto people-hover" data-animation="fade-in" style="animation-delay: 0.1s;">
+            <img
+              src="Images/expert-people1.png"
+              alt="Expert person image"
+              class="img-fluid "
+            />
+            <p class="text-start team-person-name mb-0 mt-2 ">
+              Upendra Singh
+              <p class="text-start team-designation">Lorem Ipsum</p>
+            </p>
+          </div>
+    
+          <!-- Column 2 -->
+          <div class="col-lg-2 col-md-6 mx-auto people-hover" data-animation="fade-in" style="animation-delay: 0.3s;">
+            <img
+              src="Images/expert-people1.png"
+              alt="Expert person image"
+              class="img-fluid"
+            />
+            <p class="text-start team-person-name mb-0 mt-2">
+              Virat Mahajan
+              <p class="text-start team-designation">Lorem Ipsum</p>
+            </p>
+          </div>
+    
+          <!-- Column 3 -->
+          <div class="col-lg-2 col-md-6 mx-auto people-hover" data-animation="fade-in" style="animation-delay: 0.5s;">
+            <img
+              src="Images/expert-people1.png"
+              alt="Expert person image"
+              class="img-fluid"
+            />
+            <p class="text-start team-person-name mb-0 mt-2">
+              Sonakshi Dua
+              <p class="text-start team-designation">Lorem Ipsum</p>
+            </p>
+          </div>
+    
+          <!-- Column 4 -->
+          <div class="col-lg-2 col-md-6 mx-auto people-hover" data-animation="fade-in" style="animation-delay: 0.7s;">
+            <img
+              src="Images/expert-people1.png"
+              alt="Expert person image"
+              class="img-fluid"
+            />
+            <p class="text-start team-person-name mb-0 mt-2">
+              Prasad Parik
+              <p class="text-start team-designation">Lorem Ipsum</p>
+            </p>
+          </div>
+    
+          <a class="text-decoration mb-4" href="people.html">Meet the Team<i class="fa-solid fa-chevron-right px-2"></i></a>
+        </div>
+      </div>
+    </div>
+    
+
+<!--Banner Section-->
+
+<div class="container-fluid d-flex justify-content-center align-items-center" data-animation="slide-up" style="background-color: #012673; height: 350px;">
+  <div class="container d-flex justify-content-center align-items-center position-relative">
+    <div class="row d-flex align-items-center flex-lg-row justify-content-center ">
+      <div class="col-lg-6 col-md-12 col-sm-12 ">
+        <h1 class="mt-lg-4 text-center" style="color: #ffffff;">
+          Cloud Center
+        </h1>
+      </div>
+      <div class="col-lg-6 col-md-12 col-sm-12 responsive-center">
+        <p class="pb-lg-3" style="color: #ffffff;">
+          It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+        </p>
+        
+        <a class="btn btn-primary custom-btn1 py-2 px-4 text-decoration-none text-white pb-only-sm-4" href="about.html">
+          Services
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="background-animations1">
+    <img
+      src="Images/dots-shape.png"
+      alt="GetToKnowUs image"
+      class="bg-img-banner-1" data-animation="float" style="width: 100px; max-width: 100%;"
+    />
+    <img
+      src="Images/square-shape.png"
+      alt="GetToKnowUs image"
+      class="bg-img-banner" data-animation="float" style="max-width: 100%;"
+    />
+  </div>
+</div>
+
+
+<!-- Testimonial Section --> 
+
+<div class="container-fluid Testimonial-bg ">
+<div class="container text-center">
+  <div class="row d-flex align-items-center">
+    <div class="col-lg-12 col-md-12 mt-5">
+      <span class="text-highlight responsive-span" data-animation="fade-in">TESTIMONIALS</span>
+      <h3 class="testimonial-text mt-4 " data-animation="slide-up">Meet Our Clients</h3>
+      <p class="mt-3 text-increase mb-3 " data-animation="slide-up" >
+        Voices of trust and satisfaction from our valued clients
+      <br class="d-none d-sm-block" />
+      Real experiences, real success stories
+      </p>
+    </div>
+
+    <div class="carousel-container position-relative mx-auto py-2 " data-animation="slide-up">
+
+    <div id="carouselExampleIndicators" class="carousel slide col-lg-8 col-md-8 col-sm-12 mx-auto" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active c-btn-color" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="c-btn-color" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" class="c-btn-color" aria-label="Slide 3"></button>
+      </div>
+
+      <div class="carousel-inner textimonial-carousel ">
+        <div class="carousel-item active">
+          <p >We are incredibly pleased with the exceptional support provided by SIMPLOK. Their expertise in SAP integrations and Nintex forms has been invaluable to our operations. The team at SIMPLOK has consistently demonstrated their proficiency and dedication, ensuring seamless integration and functionality.
+
+            Moreover, their ability to implement new Customer EDIs in LogicApps has significantly enhanced our workflow efficiency. Their collaboration with our SAP team has been outstanding, providing timely and effective solutions to any challenges we faced.
+            
+            One of the standout qualities of SIMPLOK is their responsiveness. They are always quick to address our queries and concerns, often going above and beyond to ensure that our needs are met promptly. Their proactive approach and willingness to assist at any time have made a significant difference in our overall experience.
+            
+            SIMPLOK’s commitment to excellence and customer satisfaction is truly commendable. We highly recommend their services to any organization seeking reliable and expert support in these areas.</p>
+          <div class="row">
+            <div class="text-lg-start text-md-start mb-3 mb-lg-0 col-lg-6 col-md-6">
+              <h6 >Aaron Ho</h6>
+              <p > IT Applications Director</p>
+            </div>
+            <div class="d-block text-lg-end text-md-end col-lg-6 col-md-6 mb-4">
+            <img src="Images/inovalogo.png" class="testimonial-logo " alt="...">
+            </div>
+
+          </div>   
+        </div>
+
+        <div class="carousel-item" >
+          <p >We are incredibly pleased with the exceptional support provided by SIMPLOK. Their expertise in SAP integrations and Nintex forms has been invaluable to our operations. The team at SIMPLOK has consistently demonstrated their proficiency and dedication, ensuring seamless integration and functionality.
+
+            Moreover, their ability to implement new Customer EDIs in LogicApps has significantly enhanced our workflow efficiency. Their collaboration with our SAP team has been outstanding, providing timely and effective solutions to any challenges we faced.
+            
+            One of the standout qualities of SIMPLOK is their responsiveness. They are always quick to address our queries and concerns, often going above and beyond to ensure that our needs are met promptly. Their proactive approach and willingness to assist at any time have made a significant difference in our overall experience.
+            
+            SIMPLOK’s commitment to excellence and customer satisfaction is truly commendable. We highly recommend their services to any organization seeking reliable and expert support in these areas.</p>
+          
+            <div class="row">
+              <div class="text-lg-start text-md-start mb-3 mb-lg-0 col-lg-6 col-md-6">
+                <h6>Name of Person</h6>
+                <p >Designation</p>
+              </div>
+              <div class="d-block text-lg-end text-md-end col-lg-6 col-md-6 mb-4">
+                <img src="Images/inovalogo.png" class="testimonial-logo" alt="...">
+              </div>
+            </div>
+        </div>
+      </div>
+      
+      <button class="carousel-control-prev testimonial-btn" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+       
+        <i class="fas fa-chevron-left"></i>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next testimonial-btn" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <i class="fas fa-chevron-right"></i>
+        
+        <span class="visually-hidden">Next</span>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- Logo Slider Section -->
+ 
+    <div class="container logo-slider my-5">
+      <div class="row align-items-center h-100">
+        <div class="container rounded">
+          
+          <div class="slider">
+            <div class="logos">
+              <img src="Images/inovalogo.png" alt="JavaScript" class="fab">
+              <img src="Images/inovalogo.png" alt="JavaScript" class="fab">
+              <img src="Images/inovalogo.png" alt="JavaScript" class="fab">
+              <img src="Images/logo.png" alt="JavaScript" class="fab">
+              <img src="Images/logo.png" alt="JavaScript" class="fab">
+
+              <img src="Images/logo.png" alt="JavaScript" class="fab">
+              <img src="Images/inovalogo.png" alt="JavaScript" class="fab">
+              <img src="Images/logo.png" alt="JavaScript" class="fab">
+              <img src="Images/logo.png" alt="JavaScript" class="fab">
+              <img src="Images/logo.png" alt="JavaScript" class="fab">
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+
+  <a class="text-decoration" href="testimonial.html">See More<i class="fa-solid fa-chevron-right px-2 mb-3 py-3"></i></a>
+  </div>
+</div>
+</div>
+
+<style>
+
+.container.logo-slider {
+  overflow: hidden;
+}
+
+.slider {
+  animation: slidein 30s linear infinite;
+  white-space: nowrap;
+}
+
+.logos {
+  width: 500px;
+  display: flex;
+  margin: 0px 0;
+  gap: 80px;
+}
+
+.fab {
+  width: calc(100% / 5); /* This ensures each image takes up 1/5th of the container */
+  animation: fade-in 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+  display: inline-block;
+  object-fit: contain; /* Ensures images scale to fit while preserving aspect ratio */
+}
+
+@keyframes slidein {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+  </style>
+  
+
+
+<!--Blogs-->
+<!-- <div class="container text-center d-none d-sm-block">
+  <div class="row d-flex align-items-center mt-md-4">
+      <div class="col-12">
+          <span class="text-highlight responsive-span">WHAT WE UPDATE IN BLOGS</span>
+          <h3 class="mt-4">
+             Explore Our Latest  <br /> Blog Updates
+          </h3>
+      </div> -->
+      <!-- First Row -->
+      <!-- <div class="row g-4 d-flex align-items-center my-md-3 justify-content-center mx-auto ">
+          
+          <div class="col-md-3">
+            <div class="card">
+              <img src="Images/testimonial.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a class="btn btn-primary custom-btn py-2 px-4" style="color: white;" href="blog.html" >Read More</a>
+              </div>
+            </div>
+          </div>
+         
+          <div class="col-md-3">
+            <div class="card">
+              <img src="Images/testimonial.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a class="btn btn-primary custom-btn py-2 px-4" style="color: white;" href="blog.html" >Read More</a>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="col-md-3">
+            <div class="card">
+              <img src="Images/testimonial.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                
+                <a class="btn btn-primary custom-btn py-2 px-4" style="color: white;" href="blog.html" >Read More</a>
+
+              </div>
+            </div>
+          </div>
+
+          <a class="text-decoration" href="blog.html">View More<i class="fa-solid fa-chevron-right px-2 mb-3 py-3"></i></a>
+      </div>
+
+      </div>
+      </div> -->
+
+
+<!-- Request a Call Back -->
+
+<div class="container-fluid Request-call d-flex align-items-center" >
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Left column -->
+      <div class="col-lg-6 col-md-12 col-sm-12">
+        <h1 class="Request-text my-3"data-animation="slide-up">Request a Call Back</h1>
+        <p class="text-request pe-lg-5 pe-md-3 my-3" data-animation="slide-up">
+          Have questions or need assistance? Request a call back, and our experts will connect with you to guide you further!
+        </p>
+      </div>
+
+      <!-- Right column -->
+      <div class="col-lg-6 col-md-12 col-sm-12" data-animation="slide-up">
+        <form id="callbackForm" novalidate>
+          <div class="row g-3">
+
+            <!-- Name input -->
+            <div class="col-lg-6 col-md-6 col-sm-6">
+              <div class="position-relative">
+                <input
+                  type="text"
+                  class="form-control custom-autofill"
+                  id="firstName"
+                  name="firstName"
+                  placeholder="First Name"
+                  required
+                  pattern="^[a-zA-Z\s]+$"
+                  title="Only letters and spaces are allowed"
+                  style="border: 0.5px solid white; background: transparent; color: white;"
+                />
+                <div class="invalid-feedback">Please enter a valid first name (letters only).</div>
+              </div>
+            </div>
+
+            <!-- Last Name input -->
+            <div class="col-lg-6 col-md-6 col-sm-6">
+              <div class="position-relative">
+                <input
+                  type="text"
+                  class="form-control custom-autofill"
+                  id="lastName"
+                  name="lastName"
+                  placeholder="Last Name"
+                  required
+                  pattern="^[a-zA-Z\s]+$"
+                  title="Only letters and spaces are allowed"
+                  style="border: 0.5px solid white; background: transparent; color: white;"
+                />
+                <div class="invalid-feedback">Please enter a valid last name (letters only).</div>
+              </div>
+            </div>
+
+            <!-- Email input -->
+            <div class="col-lg-6 col-md-6 col-sm-6">
+              <div class="position-relative">
+                <input
+                  type="email"
+                  class="form-control custom-autofill"
+                  id="email"
+                  name="email"
+                  placeholder="Email"
+                  required
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                  title="Please enter a valid email address"
+                  style="border: 0.5px solid white; background: transparent; color: white;"
+                />
+                <div class="invalid-feedback">Please enter a valid email address.</div>
+              </div>
+            </div>
+
+            <!-- Phone number input -->
+            <div class="col-lg-6 col-md-6 col-sm-6">
+              <div class="position-relative">
+                <input
+                  type="tel"
+                  class="form-control custom-autofill"
+                  id="phone"
+                  name="phone"
+                  placeholder="Phone Number"
+                  required
+                  pattern="^\+?[1-9]\d{1,14}$"
+                  title="Please enter a valid phone number"
+                  style="border: 0.5px solid white; background: transparent; color: white;"
+                />
+                <div class="invalid-feedback">Please enter a valid phone number.</div>
+              </div>
+            </div>
+
+            <!-- Textbox -->
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              <div class="position-relative">
+                <textarea
+                  class="form-control custom-autofill"
+                  id="message"
+                  name="message"
+                  placeholder="Message"
+                  rows="3"
+                  required
+                  minlength="10"
+                  maxlength="500"
+                  title="Message must be between 10 and 500 characters"
+                  style="border: 0.5px solid white; background: transparent; color: white;"
+                ></textarea>
+                <div class="invalid-feedback ">Message must be between 10 and 500 characters.</div>
+              </div>
+            </div>
+
+            <!-- Submit button -->
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              <button
+                type="submit"
+                class="btn w-100 submit">
+                Send Now
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="custom-line"></div>
+ 
+
+
+<!-- Footer Section -->
+<div class="container-fluid footer px-5 py-5 d-flex align-items-center" >
+  <div class="row w-100 align-items-center"data-animation="slide-up">
+    <!-- Left Column with Logo and Text -->
+    <div class="col-lg-4 col-md-12 text-center text-lg-start footerlogo-320">
+      <a class="nav-link me-lg-3" href="index.html">
+        <img
+          src="Images/Logo-white.png"
+          alt="Logo image"
+          class="img-fluid"
+          style="height: auto; width: 130px"
+        />
+      </a>
+    </div>
+
+    <!-- Right Column with Multiple Sections -->
+    <div class="col-lg-8 col-md-12 Footer-text pt-md-4 text-center">
+      <div class="row justify-content-end align-items-center">
+        <!-- Column 1 -->
+        <div class="col-lg-2 col-md-6 col-sm-2 py-3">
+          <a class="text-decoration-none" style="color:white" href="about.html">About Us</a>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="col-lg-2 col-md-6 col-sm-2 py-3">
+          <a class="text-decoration-none" style="color:white" href="testimonial.html">Testimonials</a>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="col-lg-2 col-md-6 col-sm-2 py-3">
+          <a class="text-decoration-none" style="color:white" href="blog.html">Blogs</a>
+        </div>
+
+        <!-- Column 4 -->
+        <div class="col-lg-2 col-md-6 col-sm-2 py-3">
+          <a class="text-decoration-none" style="color:white" href="contactus.html">Contact</a>
+        </div>
+
+        <!-- Column 5 (LinkedIn Icon) -->
+        <div class="col-lg-2 col-md-6 col-sm-2 py-3">
+          <a class="text-decoration-none" style="color:white" href="https://www.linkedin.com/company/simp-lok/">
+            <i class="fab fa-linkedin fa-3x"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+// Bootstrap 5 Form Validation
+  (function () {
+  'use strict';
+    
+  // Fetch all forms we want to apply custom Bootstrap validation to
+  const forms = document.querySelectorAll('#callbackForm');
+    Array.from(forms).forEach(function (form) {
+    form.addEventListener(
+      'submit',
+      function (event) {
+       if (!form.checkValidity()) {
+        event.preventDefault();
+        event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+        },
+        false
+        );
+        });
+      })();
+    </script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+<script>
+  // JavaScript for Scroll Animations
+document.addEventListener("DOMContentLoaded", () => {
+  const elements = document.querySelectorAll("[data-animation]");
+  
+  const observerOptions = {
+    threshold: 0.1, // Trigger when 10% of the element is visible
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("animate");
+        observer.unobserve(entry.target); // Stop observing once animated
+      }
+    });
+  }, observerOptions);
+
+  elements.forEach(element => {
+    observer.observe(element);
+  });
+});
+
+</script>
+
+
+
+
+  </body>
+</html>
